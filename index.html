@@ -199,6 +199,7 @@
       //Universal Declarations
 
       let flag = 0;
+      let gameStartFlag = 0;
 
       let scorevalue = 0;
 
@@ -926,6 +927,7 @@
       //Touch or Click X and Y position
 
       addEventListener("click", (e) => {
+        if(gameStartFlag){
 
         let angle = Math.atan2(
 
@@ -944,7 +946,7 @@
         };
 
         bullets.push(new Bullet(PosX, PosY, 5, "deeppink", bulletVelocity, 1));
-
+}
       });
 
     </script>
