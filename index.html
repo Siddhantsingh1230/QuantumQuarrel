@@ -492,10 +492,7 @@
 
           ctx.beginPath();
 
-          ctx.shadowColor = this.color;
-
-          ctx.shadowBlur = this.radius * 1.15;
-
+          
           ctx.fillStyle = this.color;
 
           ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
@@ -543,8 +540,11 @@
         }
 
         draw() {
-
+ctx.save();
           ctx.beginPath();
+          ctx.shadowColor = this.color;
+
+          ctx.shadowBlur = 15;
 
           ctx.fillStyle = this.color;
 
@@ -553,6 +553,7 @@
           ctx.fill();
 
           ctx.restore();
+          
 
         }
 
